@@ -1,0 +1,7 @@
+POST http://localhost:8080/api/person
+content-type: application/json
+
+{
+  "contractStartDate": "2022-01-01",
+  "contractEndDate": "2022-12-31"
+}

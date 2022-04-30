@@ -1,0 +1,22 @@
+personservice:
+  datasource:
+    hr:
+      url: jdbc:postgresql://localhost:5432/hr
+      username: postgres
+      password: postgres
+  liquibase:
+    hr:
+      change-log: classpath:/changelog/master.xml
+
+management:
+  endpoint:
+    health:
+      enabled: true
+      show-components: always
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: health, loggers, metrics, caches
+
+logging.level.org.springframework.web.filter.CommonsRequestLoggingFilter: debug
