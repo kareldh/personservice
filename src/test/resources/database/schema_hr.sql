@@ -1,6 +1,6 @@
-CREATE SCHEMA if not exists hr;
+CREATE SCHEMA if not exists person;
 
-CREATE TABLE if not exists hr.person (
+CREATE TABLE if not exists person.person (
     id uuid PRIMARY KEY DEFAULT gen_random_uuid(),
     firstName varchar(128),
     lastName varchar(128),

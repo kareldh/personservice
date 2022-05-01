@@ -1,7 +1,8 @@
 version: '3.8'
 services:
   postgress:
-    image: postgres
+    build:
+      dockerfile: ./postgres_hr.dockerfile
     restart: always
     environment:
       POSTGRES_USER: postgres

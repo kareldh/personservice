@@ -1,12 +1,13 @@
 personservice:
   datasource:
     hr:
-      url: jdbc:postgresql://localhost:5432/hr
+      url: jdbc:postgresql://localhost:5432/hr?currentSchema=person
       username: postgres
       password: postgres
   liquibase:
     hr:
       change-log: classpath:/changelog/master.xml
+      default-schema: person
 
 management:
   endpoint:
@@ -24,3 +25,6 @@ management:
         include: health, loggers, metrics, caches
 
 logging.level.org.springframework.web.filter.CommonsRequestLoggingFilter: debug
+
+server:
+  port: 8081
