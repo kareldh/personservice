@@ -7,6 +7,8 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.UUID;
+
 @RestController
 @RequestMapping(value = "/api/person")
 public class PersonController {
@@ -24,7 +26,7 @@ public class PersonController {
     }
 
     @GetMapping(value = "/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
-    ResponseEntity<Person> getPerson(@PathVariable String id) {
+    ResponseEntity<Person> getPerson(@PathVariable UUID id) {
         return ResponseEntity.of(personQueryService.findPerson(id));
     }
 }

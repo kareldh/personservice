@@ -5,6 +5,7 @@ import com.example.personservice.person.repository.PersonRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
+import java.util.UUID;
 
 @Service
 public class DefaultPersonQueryService implements PersonQueryService {
@@ -15,7 +16,7 @@ public class DefaultPersonQueryService implements PersonQueryService {
     }
 
     @Override
-    public Optional<Person> findPerson(String id) {
+    public Optional<Person> findPerson(UUID id) {
         return personRepository.findById(id);
     }
 }
