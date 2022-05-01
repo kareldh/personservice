@@ -1,1 +1,1 @@
-GET http://localhost:8080/actuator/health
+GET http://localhost:8081/actuator/health
