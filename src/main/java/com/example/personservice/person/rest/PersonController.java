@@ -7,8 +7,6 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.UUID;
-
 @RestController
 @RequestMapping(value = "/api/person")
 public class PersonController {
@@ -21,7 +19,7 @@ public class PersonController {
     }
 
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
-    UUID createPerson(@RequestBody Person person) {
+    Person createPerson(@RequestBody Person person) {
         return personService.save(person);
     }
 

@@ -14,6 +14,10 @@ management:
       enabled: true
       show-components: always
       show-details: always
+      cache:
+        time-to-live: 10s
+      probes:
+        enabled: true
   endpoints:
     web:
       exposure:

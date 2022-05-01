@@ -9,6 +9,8 @@
             <column name="id" type="uuid" defaultValueComputed="gen_random_uuid()">
                 <constraints primaryKey="true" primaryKeyName="person_id_pk"/>
             </column>
+            <column name="firstName" type="varchar(128)"/>
+            <column name="lastName" type="varchar(128)"/>
             <column name="contractStartDate" type="date"/>
             <column name="contractEndDate" type="date"/>
         </createTable>
