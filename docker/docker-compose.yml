@@ -2,7 +2,7 @@ version: '3.8'
 services:
   postgress:
     build:
-      dockerfile: ./postgres_hr.dockerfile
+      dockerfile: postgres_hr.dockerfile
     restart: always
     environment:
       POSTGRES_USER: postgres
