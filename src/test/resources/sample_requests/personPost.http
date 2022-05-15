@@ -1,4 +1,4 @@
-POST http://localhost:8081/api/person
+POST http://localhost:8081/personservice/api/person
 content-type: application/json
 
 {

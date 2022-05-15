@@ -9,6 +9,10 @@ personservice:
       change-log: classpath:/changelog/master.xml
       default-schema: person
 
+spring:
+  application:
+    name: personservice
+
 management:
   endpoint:
     health:
@@ -28,3 +32,5 @@ logging.level.org.springframework.web.filter.CommonsRequestLoggingFilter: debug
 
 server:
   port: 8081
+  servlet:
+    contextPath: /${spring.application.name}

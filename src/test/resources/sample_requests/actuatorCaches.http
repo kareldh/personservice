@@ -1,1 +1,1 @@
-GET http://localhost:8081/actuator/caches
+GET http://localhost:8081/personservice/actuator/caches
