@@ -12,6 +12,10 @@ personservice:
 spring:
   application:
     name: personservice
+#  boot:
+#    admin:
+#      client:
+#        url: http://localhost:8082
 
 management:
   endpoint:
@@ -26,6 +30,7 @@ management:
   endpoints:
     web:
       exposure:
+#        include: '*'
         include: health, loggers, metrics, caches
 
 logging.level.org.springframework.web.filter.CommonsRequestLoggingFilter: debug
