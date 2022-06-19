@@ -4,6 +4,10 @@ personservice:
       url: jdbc:postgresql://localhost:5432/hr?currentSchema=person
       username: postgres
       password: postgres
+      configuration:
+        pool-name:  person pool
+        type: com.zaxxer.hikari.HikariDataSource
+        connectionTimeout: 1000
   liquibase:
     hr:
       change-log: classpath:/changelog/master.xml
