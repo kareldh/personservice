@@ -37,7 +37,9 @@ management:
 #        include: '*'
         include: health, loggers, metrics, caches
 
-logging.level.org.springframework.web.filter.CommonsRequestLoggingFilter: debug
+logging:
+  level:
+    org.springframework.web.filter.CommonsRequestLoggingFilter: debug
 
 server:
   port: 8081
